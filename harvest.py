@@ -35,7 +35,22 @@ def make_melon_types():
 
     all_melon_types = []
 
-    # Fill in the rest
+    muskmelon = MelonType('musk', 1998, 'green', True, True, 'Muskmelon')
+    muskmelon.add_pairing('mint')
+    all_melon_types.append(muskmelon)
+
+    casaba = MelonType('cas', 2003, 'orange', False, False, 'Casaba')
+    casaba.add_pairing('stawberry')
+    casaba.add_pairing('mint')
+    all_melon_types.append(casaba)
+
+    crenshaw = MelonType('cren', 1996, 'green', False, False, 'Crenshaw')
+    crenshaw.add_pairing('proscuitto')
+    all_melon_types.append(crenshaw)
+
+    y_watermelon = MelonType('ym', 2013, 'yellow', False, True, 'Yellow Watermelon')
+    y_watermelon.add_pairing('ice cream')
+    all_melon_types.append(y_watermelon)
 
     return all_melon_types
 
@@ -69,5 +84,5 @@ def get_sellability_report(melons):
 
     # Fill in the rest 
 
-muskmelon = MelonType('musk', 1998, 'green', True, True, 'Muskmelon')
+
 
