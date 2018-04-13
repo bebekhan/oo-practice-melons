@@ -95,7 +95,9 @@ class Melon(object):
         self.color_rating = color_rating
         self.harvest_field = harvest_field
         self.harvested_by = harvested_by
-        
+    
+    def IsSellable(self):
+        return self.shape_rating > 5 and self.color_rating > 5 and self.harvest_field != 3
 
 def make_melons(melon_types):
     """Returns a list of Melon objects."""
@@ -116,10 +118,15 @@ def make_melons(melon_types):
 
     # look in make_melon_type_looup() dictionary for instance of MelonType
 
+
+
+
 def get_sellability_report(melons):
     """Given a list of melon object, prints whether each one is sellable."""
 
-    # Fill in the rest 
+    # for melon in melons:  #loop through each instance in the list
+        
+    #     print "{} pairs with ".format(melon.name)  # print name attribute of instance
 
-print make_melons(melon_types_lookup)
+melons = make_melons(melon_types_lookup)
 
